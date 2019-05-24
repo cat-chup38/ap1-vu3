@@ -3,7 +3,7 @@
 
     {{ persona.id }} -> {{ persona.nombre }} - {{ persona.apellido }}
     
-    // Para emitir un evento que está vinculado a este elemento
+    <!--Para emitir un evento que está vinculado a este elemento-->
     <button @click="$emit('quitarpersona', persona.id)">Eliminar</button>
   
   </li>

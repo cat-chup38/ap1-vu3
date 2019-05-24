@@ -1,6 +1,6 @@
 <template>
 	<div>
-    <button @click.exact="getPersonas">Consultar</button>
+    <button @click.exact="obtenerPersonas">Consultar</button>
 		<!--<BaseInputText v-model="newTodoText" @keydown.enter="getPersonas"/>-->
 	
     <ul v-if="personas.length">
@@ -23,37 +23,15 @@ export default {
     return {
 			newTodoText: '',
             personas: [
-				    {
-                        apellido: 'yyt',
-                        documento:"345635",
-                        edad: 23,
-                        fecha_nacimiento:"06/03/1990",
-                        guid:"da21ff8e-6b6f-11e9-a69d-b8975a5c0906",
-                        id:1775,
-                        municipio:1,
-                        nacionalidad:1,
-                        nombre: "ya existe 2",
-                        nombre_completo:"345635",
-                        sexo:"F",
-                        tipo_documento:"P",
-                        usuario_creacion:"wordpressidei",
-                        usuario_modificacion:"wordpressidei"
+				    { 
+              id:1,
+              nombre: "ya existe 1",
+              apellido: 'asdf',
 				    },
 				    {
-                       apellido: 'wwww',
-                        documento:"345635",
-                        edad: 23,
-                        fecha_nacimiento:"06/03/1990",
-                        guid:"da21ff8e-6b6f-11e9-a69d-b8975a5c0906",
-                        id:125,
-                        municipio:1,
-                        nacionalidad:1,
-                        nombre: "ya existe 1",
-                        nombre_completo:"345635",
-                        sexo:"F",
-                        tipo_documento:"P",
-                        usuario_creacion:"wordpressidei",
-                        usuario_modificacion:"wordpressidei"				    
+              id:12,
+              nombre: "ya existe 2",
+              apellido: 'yiyu',
             },
             ],
             recibidos: [],
@@ -61,7 +39,7 @@ export default {
     }
   },
 	methods: {
-        getPersonas() {
+        obtenerPersonas() {
             const path = 'http://127.0.0.1:8000/api/v1/personas/'
             axios.get(path).then((response) => {
                     this.recibidos = response.data.results
