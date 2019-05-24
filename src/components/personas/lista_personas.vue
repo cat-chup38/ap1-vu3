@@ -3,18 +3,18 @@
     
     <h1>Lista de Personas</h1>
     
-    <TodoPersonas/>
+    <ConsultarPersonas/>
     
     
 	</div>
 </template>
 
 <script>
-    import TodoPersonas from './TodoPersonas.vue'
+    import ConsultarPersonas from './ConsultarPersonas.vue'
 
     export default {
         components: {
-            TodoPersonas
+            ConsultarPersonas
         }
     }
 </script>
